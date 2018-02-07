@@ -28,14 +28,6 @@ public class Restaurant {
 
     private List<Menu> menu;
 
-    public Restaurant(String id, String name, Boolean completed, Date createdAt, String address, List<Menu> menu) {
-        this.id = id;
-        this.name = name;
-        this.createdAt = createdAt;
-        this.address = address;
-        this.menu = menu;
-    }
-
     public String getId() {
         return id;
     }

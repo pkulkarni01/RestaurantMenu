@@ -9,11 +9,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
-import java.util.List;
 
-@Document(collection="menus")
+@Document(collection="menuitems")
 @JsonIgnoreProperties(value = {"createdAt"})
-public class Menu {
+public class MenuItem {
 
     @Id
     private String id;
@@ -25,7 +24,17 @@ public class Menu {
 
     private Date createdAt = new Date();
 
-    private List<MenuItem> menuItems;
+    private String description;
+
+    private float price;
+
+    public MenuItem(String id, String name, Date createdAt, String description, float price) {
+        this.id = id;
+        this.name = name;
+        this.createdAt = createdAt;
+        this.description = description;
+        this.price = price;
+    }
 
     public String getId() {
         return id;
@@ -51,11 +60,19 @@ public class Menu {
         this.createdAt = createdAt;
     }
 
-    public List<MenuItem> getMenuItems() {
-        return menuItems;
+    public String getDescription() {
+        return description;
     }
 
-    public void setMenuItems(List<MenuItem> menuItems) {
-        this.menuItems = menuItems;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
     }
 }
