@@ -28,14 +28,6 @@ public class MenuItem {
 
     private float price;
 
-    public MenuItem(String id, String name, Date createdAt, String description, float price) {
-        this.id = id;
-        this.name = name;
-        this.createdAt = createdAt;
-        this.description = description;
-        this.price = price;
-    }
-
     public String getId() {
         return id;
     }
