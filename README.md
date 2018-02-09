@@ -7,4 +7,10 @@ mvn clean install -DskipTests and then run the app using command mvn spring-boot
 
 REST API can be tested with any HTTP client.
 
-localhost:8080/api/restaurants
+REST API endpoints
+
+1) /api/restaurants -- GET, POST ---Gets and creates a restaruant
+2) /api/restaurants/{id} -- GET restaurant with specific id and DELETE restaurant with specific id
+3) /api/restaurants/{id}/menu -- GET , POST -- Gets and creates a restaurant menu.
+4) /api/restaurants/{rid}/menu/{id} -- DELETE a restaurant menu with given id.
+5) /api/restaurants/{rid}/menu/{id}/item -- POST,GET --- Gets and posts restaurant menu item.
